@@ -15,6 +15,7 @@ public class LivingRoom extends Room{
 				+ "Two sofas mark the center of the living room."
 		);
 		
+		this.addExitRoom(new Kitchen());
 		//Look at sofa - Looks moldy
 		//Touch Sofa - Dry as a bone
 		//Sit on ~~~ - you decide you don't actually want to sit on that.
@@ -28,20 +29,24 @@ public class LivingRoom extends Room{
 		
 		//Get in the first word that the user typed
 		switch(args[0].toLowerCase()) {
+		case "interact":
+			if(args[2].contains("sofa"))
+				sofa.interactWith();
 		case "sit":
 			if (args[2].contains("sofa"))
-				sitOnSofa();
+				sofa.sitOn();
 			else
 				System.out.println("You decide not to sit on that");
 			break;
 		case "go":
-			System.out.println("You try to go to a different room, but you realize this is the only room. you are in hell. And all the only thing you will know is that there are two moldy sofas");
+			if(args[2].contains("kitchen")) {
+				player.currentRoom = this.getExit("kitchen");
+			}
 		}
 		
+		System.out.println("\n");//Newline
 	}
 	
-	public void sitOnSofa() {
-		System.out.println("You decide against sitting on the couch. It doesn't look safe");
-	}
+	
 
 }

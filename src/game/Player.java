@@ -2,7 +2,7 @@ package game;
 import fixtures.rooms.Room;
 
 public class Player {
-	Room currentRoom;
+	public Room currentRoom;
 
 	public Player(Room currentRoom) {
 		super();

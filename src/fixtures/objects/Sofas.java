@@ -15,8 +15,12 @@ public class Sofas extends Fixture implements Interactive{
 
 	@Override
 	public void interactWith() {
-		// TODO Auto-generated method stub
+		System.out.println("You inspect the Sofa more closely. It is covered in some red and green mold. It pulses unnaturally. You think it is best that you don't sit on it.");
 		
+	}
+	
+	public void sitOn() {
+		System.out.println("You decide against sitting on the couch. It doesn't look safe");
 	}
 
 }
