@@ -26,13 +26,10 @@ public class Main {
 	
 	private static String[] collectInput() {
 		Scanner scanner = new Scanner(System.in);
-		return scanner.next().split(" ");
+		return scanner.nextLine().split(" ");
 	}
 	
 	private static void parse(String[] command, Player player) {
-		//method Here
-		//Do-while loop
-		//Switch statement on command[0]
-		//If no valid command, loop again
+		player.currentRoom.handleRoomSpecificCommands(command, player);
 	}
 }

@@ -3,9 +3,10 @@ package fixtures.rooms;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.sun.tools.classfile.CharacterRangeTable_attribute.Entry;
+import game.Player;
 
-public class Room extends fixtures.Fixture{
+
+public abstract class Room extends fixtures.Fixture{
 	
 	//To add things to this Hash Map, use neighboringRooms.add(number, Room info)
 	private Map<Integer, Room> neighboringRooms;
@@ -46,4 +47,5 @@ public class Room extends fixtures.Fixture{
 		neighboringRooms.put(key, exit);
 	}
 	
+	public abstract void handleRoomSpecificCommands(String[] args, Player player);
 }
