@@ -21,6 +21,7 @@ public class Main {
 	}
 	
 	private static void printRoom(Player player) {
+		System.out.println(player.currentRoom.name);
 		System.out.println(player.currentRoom.longDescription);
 	}
 	

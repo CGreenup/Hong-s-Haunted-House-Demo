@@ -4,9 +4,9 @@ import game.Player;
 
 public class Kitchen extends Room{
 
-	Kitchen(){
+	public Kitchen(){
 		super(
-				"Kitchen".toLowerCase(), 
+				"Kitchen", 
 				"A kitchen", 
 				"Long description of kitchen here");
 	}

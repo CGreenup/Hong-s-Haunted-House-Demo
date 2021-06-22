@@ -4,10 +4,13 @@ import fixtures.rooms.*;
 
 public class RoomManager {
 	Room startingRoom;
-	Room[] allRooms = new Room[8];
+	Room[] allRooms;
 	
 	public void init() {
-		allRooms[0] = new LivingRoom();
+		Room [] allRooms = new Room[] {
+				new LivingRoom(),
+				new Kitchen()
+		};
 		startingRoom = allRooms[0];
 	}
 }
